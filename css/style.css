@@ -1,0 +1,88 @@
+/*Style*/
+
+body{
+    margin:0%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    background-color:rgb(255, 198, 10);
+    background-image:linear-gradient(to bottom, rgb(255, 198, 10), rgb(240, 178, 0));
+}
+
+.mainContainer{
+    height:100vh;
+}
+
+/*Sida1*/
+
+#sida1main{
+    display:grid;
+    grid-template-areas:
+    'i'
+    'ib'
+    ;
+}
+
+    #introduction{
+        grid-area:i;
+
+        color:white;
+        margin-top:12%;
+
+        display:grid;
+        grid-template-areas:
+        'ih'
+        'it'
+    }
+
+        #introHeader{
+            grid-area:ih;
+
+            text-align:center;
+            font-family:'Courier New', Courier, monospace;
+            font-weight:550;
+            font-size:5rem;
+            margin-left:3%;
+            margin-right:3%;
+        }
+
+        #introText{
+            grid-area:it;
+
+            color:rgb(211, 127, 0);
+            text-align:center;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight:400;
+            font-size:1.2rem;
+            font-style:italic;
+            margin-top:-5rem;
+        }
+
+    #introButton{
+        grid-area:ib;
+
+        color:white;
+
+
+    }
+
+
+/*Sida2*/
+
+
+
+/*Sida3*/
+
+
+
+/*Sida4*/
+
+
+
+
+
+
+/*Mobile*/
+
+
+
+/*Desktop*/
