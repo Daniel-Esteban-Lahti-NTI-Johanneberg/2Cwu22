@@ -8,6 +8,46 @@ body{
     background-image:linear-gradient(to bottom, rgb(255, 198, 10), rgb(240, 178, 0));
 }
 
+.navMenu{
+    display:flex;
+
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:none;
+    justify-content:center;
+
+    
+}
+
+    .navMenu li{
+        float:right;
+    }
+
+        .navMenu li a{
+            display: block;
+
+            padding: 8px;
+            background-color:none;
+            text-decoration:none;
+            text-align:center;
+            font-family:'Arcane';
+            font-size:20px;
+            color:rgb(51, 31, 0);
+
+            transition-duration:0.2s;
+        }
+
+            li a:hover:not(.active){
+                background-color:rgb(223, 145, 28);
+                color:white;
+            }
+
+            .active{
+                background-color:rgb(223, 145, 28);
+            }
+
 .mainContainer{
     height:100vh;
 }
@@ -38,8 +78,8 @@ body{
             grid-area:ih;
 
             text-align:center;
-            font-family:'Courier New', Courier, monospace;
-            font-weight:550;
+            font-family:'Arcane';
+            font-weight:500;
             font-size:5rem;
             margin-left:3%;
             margin-right:3%;
@@ -48,22 +88,38 @@ body{
         #introText{
             grid-area:it;
 
-            color:rgb(211, 127, 0);
+            color:rgba(223, 145, 28, 0);
             text-align:center;
-            font-family:Arial, Helvetica, sans-serif;
-            font-weight:400;
-            font-size:1.2rem;
-            font-style:italic;
+            font-family:'Digital';
+            font-weight:100;
+            font-size:1.7rem;
             margin-top:-5rem;
+
+            transition-duration:2s;
         }
+
+            #introText:hover{
+                color:rgb(184, 116, 14);
+            }
 
     #introButton{
         grid-area:ib;
 
         color:white;
+        justify-self:center;
+        align-content:center center;
+        font-family:'Arcane';
+        font-weight:500;
+        text-decoration:none;
+        font-size:1.7rem;
 
-
+        transition-duration:0.2s;
     }
+
+        #introButton:hover{
+            color:rgb(184, 116, 14);
+            font-style:italic;
+        }
 
 
 /*Sida2*/
@@ -75,8 +131,45 @@ body{
 
 
 /*Sida4*/
+#contactIcons{
+    display:grid;
+    grid-template-areas:
+    'ig fb'
+    'yt gm'
+    ;
+}
 
+    #instagram{
+        grid-area:ig;
+    }
 
+    #facebook{
+        grid-area:fb;
+    }
+
+    #youtube{
+        grid-area:yt;
+    }
+
+    #gmail{
+        grid-area:gm;
+    }
+
+/*Misc*/
+@font-face{
+    font-family:'Social Shapes';
+    src: url(../font/Smartphone\ Color\ Pro.ttf)
+}
+
+@font-face{
+    font-family:'Arcane';
+    src: url(../font/Arcane\ Nine.otf)
+}
+
+@font-face{
+    font-family:'Digital';
+    src: url(../font/DS-DIGI.TTF)
+}
 
 
 
