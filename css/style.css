@@ -1,14 +1,20 @@
-
+/*---------*/
 /*Variables*/
+/*---------*/
 
 :root{
-    --yellow:rgb(255, 198, 10);
+    --yellow:rgb(240, 187, 14);
     --dyellow:rgb(184, 116, 14);
+    --purple:rgb(150, 37, 150);
+    --dpurple:rgb(82, 33, 105);
     --teal:rgb(15, 146, 146);
-    --purple:rgb(151, 19, 151);
+    --dteal:rgb(30, 86, 104);
 }
+/*_______________________________________*/
 
+/*-----*/
 /*Style*/
+/*-----*/
 
 body{
     margin:0%;
@@ -26,10 +32,20 @@ body{
     margin:0;
     padding:0;
     overflow:hidden;
-    background-color:none;
     justify-content:center;
-    background-color:var(--yellow);
 }
+    .navMenu #yNav{
+        background-color:var(--yellow);
+        color:var(--yellow);
+    }
+
+    #pNav{
+        background-color:var(--purple);
+    }
+
+    #tNav{
+        background-color:var(--teal);
+    }
 
     .navMenu li{
         float:right;
@@ -61,6 +77,7 @@ body{
 .mainContainer{
     height:100vh;
 }
+/*_______________________________________*/
 
 /*Sida1*/
 
@@ -86,43 +103,21 @@ body{
         z-index:5;
     }
 
-    .dot{
-        display:flex;
-        
+    #movingBubbles{
+        background-image:url(../img/IntroBubbles.png);
+        background-position:center center;
+        background-size:cover;
+
         position:fixed;
-        height:12rem;
-        width:12rem;
-        background-color:var(--yellow);
-        border-radius:50%;
-        display: inline-block;
-        justify-self:center;
+        width:100vw;
+        height:100vh;
         margin-top:-100%;
 
         transition-delay:0s;
         transition-duration:2s;
-        transition-timing-function:cubic-bezier(0, 2, 3, 0);
-
-        z-index:2;
+        transition-timing-function:ease;
+        z-index:4;
     }
-
-        .dot:hover{
-            background-color:
-        }
-
-        .small{
-            height:25px;
-            width:25px;
-        }
-
-        .medium{
-            height:50px;
-            width:50px;
-            background-color:blue;
-        }
-
-        .big{
-
-        }
 
     #introduction{
         grid-area:i;
@@ -171,7 +166,6 @@ body{
 
         color:rgba(255, 255, 255, 0);
         justify-self:center;
-        align-content:center center;
         font-family:'Arcane';
         font-weight:500;
         text-decoration:none;
@@ -180,14 +174,18 @@ body{
         transition-delay:4s;
         transition-duration:1.7s;
 
-        z-index:3;
+        z-index:6;
     }
 
         #introButton:hover{
-            color:white;
+            font-size:2rem;
         }
 
 .mainContainer:hover #movingScreen{
+    margin-top:0;
+}
+
+.mainContainer:hover #movingBubbles{
     margin-top:0;
 }
 
@@ -202,51 +200,78 @@ body{
 .mainContainer:hover #introButton{
     /*color:rgb(184, 116, 14);
     color:rgb(255, 198, 10);*/
-    color:white;
+    color:var(--yellow);
 }
-
-introButton:hover{
-    color:var(--yellow) !important;
-}
-
+/*_______________________________________*/
 
 /*Sida2*/
 
 
+/*_______________________________________*/
 
 /*Sida3*/
 
 
+/*_______________________________________*/
 
 /*Sida4*/
+
 #contactIcons{
-    display:grid;
-    grid-template-areas:
-    'ig fb'
-    'yt gm'
-    ;
+    display:flex;
     justify-content:center;
     font-family:'Social Shapes';
-    color:white;
+    color:var(--teal);
+    font-size:10rem;
 }
 
+    #contactText{
+        
+        color:var(--teal);
+        font-family:'Digital';
+        font-size:12rem;
+        font-weight:500;
+    }
+
+    .contactIcon{
+        transition-duration:0.2s;
+        text-decoration:none;
+
+        color:var(--teal);
+    }
+
+        .contactIcon:hover{
+            font-size:11rem;
+        }
+
+        .contactIcon:visited{
+            color:var(--dteal);
+        }
+
+        .contactIcon:active{
+            color:white;
+        }
+
     #instagram{
-        grid-area:ig;
+        
     }
 
     #facebook{
-        grid-area:fb;
+        
     }
 
     #youtube{
-        grid-area:yt;
+        
     }
 
     #gmail{
-        grid-area:gm;
-    }
 
+    }
+/*_______________________________________*/
+
+/*----*/
 /*Misc*/
+/*----*/
+
 @font-face{
     font-family:'Social Shapes';
     src: url(../font/Type\ Icons.ttf)
@@ -261,12 +286,20 @@ introButton:hover{
     font-family:'Digital';
     src: url(../font/DS-DIGI.TTF)
 }
+/*_______________________________________*/
 
 
-
+/*--------------*/
+/*Responsiveness*/
+/*--------------*/
 
 /*Mobile*/
 
-
+@media only screen and (max-width: 479px) {
+    #movingBubbles{
+        display:none;
+    }
+}
+/*_______________________________________*/
 
 /*Desktop*/
