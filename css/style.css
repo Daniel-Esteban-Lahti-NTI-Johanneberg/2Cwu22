@@ -4,7 +4,8 @@ body{
     margin:0%;
     overflow-x:hidden;
     overflow-y:hidden;
-    background-color:rgb(255, 198, 10);
+    /*background-color:rgb(255, 198, 10);*/
+    background-color:whitesmoke
     background-image:linear-gradient(to bottom, rgb(255, 198, 10), rgb(240, 178, 0));
 }
 
@@ -17,8 +18,7 @@ body{
     overflow:hidden;
     background-color:none;
     justify-content:center;
-
-    
+    background-color:rgb(255, 198, 10);
 }
 
     .navMenu li{
@@ -55,6 +55,7 @@ body{
 /*Sida1*/
 
 #sida1main{
+    /*background-color:rgb(255, 198, 10);*/
     display:grid;
     grid-template-areas:
     'i'
@@ -62,16 +63,58 @@ body{
     ;
 }
 
+    #movingScreen{
+        background-color:rgb(255, 198, 10); 
+        position:fixed;
+        width:100vw;
+        height:53vh;
+        margin-top:-100%;
+
+        transition-delay:0s;
+        transition-duration:1.5s;
+        transition-timing-function:ease;
+        z-index:5;
+    }
+
+    .dot{
+        display:flex;
+        position:fixed;
+        height:25px;
+        width:25px;
+        background-color:rgb(250, 16, 16);
+        border-radius:50%;
+        display: inline-block;
+        justify-self:center;
+    }
+
+        .small{
+            height:25px;
+            width:25px;
+        }
+
+        .medium{
+            height:50px;
+            width:50px;
+            background-color:blue;
+        }
+
+        .big{
+
+        }
+
     #introduction{
         grid-area:i;
 
-        color:white;
+        /*color:white;*/
+        color:rgb(184, 116, 14);
         margin-top:12%;
 
         display:grid;
         grid-template-areas:
         'ih'
         'it'
+        ;
+        z-index:10;
     }
 
         #introHeader{
@@ -90,22 +133,19 @@ body{
 
             color:rgba(223, 145, 28, 0);
             text-align:center;
-            font-family:'Digital';
+            font-family:'Arcane';
             font-weight:100;
             font-size:1.7rem;
             margin-top:-5rem;
 
+            transition-delay:1s;
             transition-duration:2s;
         }
-
-            #introText:hover{
-                color:rgb(184, 116, 14);
-            }
 
     #introButton{
         grid-area:ib;
 
-        color:white;
+        color:rgb(184, 116, 14);
         justify-self:center;
         align-content:center center;
         font-family:'Arcane';
@@ -113,13 +153,20 @@ body{
         text-decoration:none;
         font-size:1.7rem;
 
-        transition-duration:0.2s;
+        transition-duration:0.6s;
     }
 
         #introButton:hover{
-            color:rgb(184, 116, 14);
-            font-style:italic;
+            color:white;
         }
+
+.mainContainer:hover #movingScreen{
+    margin-top:0;
+}
+
+.mainContainer:hover #introText{
+    color:rgb(184, 116, 14);
+}
 
 
 /*Sida2*/
@@ -137,6 +184,9 @@ body{
     'ig fb'
     'yt gm'
     ;
+    justify-content:center;
+    font-family:'Social Shapes';
+    color:white;
 }
 
     #instagram{
@@ -158,7 +208,7 @@ body{
 /*Misc*/
 @font-face{
     font-family:'Social Shapes';
-    src: url(../font/Smartphone\ Color\ Pro.ttf)
+    src: url(../font/Type\ Icons.ttf)
 }
 
 @font-face{
