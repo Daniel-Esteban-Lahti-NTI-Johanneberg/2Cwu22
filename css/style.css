@@ -1,3 +1,13 @@
+
+/*Variables*/
+
+:root{
+    --yellow:rgb(255, 198, 10);
+    --dyellow:rgb(184, 116, 14);
+    --teal:rgb(15, 146, 146);
+    --purple:rgb(151, 19, 151);
+}
+
 /*Style*/
 
 body{
@@ -5,8 +15,8 @@ body{
     overflow-x:hidden;
     overflow-y:hidden;
     /*background-color:rgb(255, 198, 10);*/
-    background-color:whitesmoke
-    background-image:linear-gradient(to bottom, rgb(255, 198, 10), rgb(240, 178, 0));
+    background-color:white;
+    /*background-image:linear-gradient(to bottom, rgb(255, 198, 10), rgb(240, 178, 0));*/
 }
 
 .navMenu{
@@ -18,7 +28,7 @@ body{
     overflow:hidden;
     background-color:none;
     justify-content:center;
-    background-color:rgb(255, 198, 10);
+    background-color:var(--yellow);
 }
 
     .navMenu li{
@@ -40,12 +50,12 @@ body{
         }
 
             li a:hover:not(.active){
-                background-color:rgb(223, 145, 28);
+                background-color:var(--yellow);
                 color:white;
             }
 
             .active{
-                background-color:rgb(223, 145, 28);
+                background-color:var(--yellow);
             }
 
 .mainContainer{
@@ -64,7 +74,7 @@ body{
 }
 
     #movingScreen{
-        background-color:rgb(255, 198, 10); 
+        background-color:var(--yellow); 
         position:fixed;
         width:100vw;
         height:53vh;
@@ -78,14 +88,26 @@ body{
 
     .dot{
         display:flex;
+        
         position:fixed;
-        height:25px;
-        width:25px;
-        background-color:rgb(250, 16, 16);
+        height:12rem;
+        width:12rem;
+        background-color:var(--yellow);
         border-radius:50%;
         display: inline-block;
         justify-self:center;
+        margin-top:-100%;
+
+        transition-delay:0s;
+        transition-duration:2s;
+        transition-timing-function:cubic-bezier(0, 2, 3, 0);
+
+        z-index:2;
     }
+
+        .dot:hover{
+            background-color:
+        }
 
         .small{
             height:25px;
@@ -106,7 +128,7 @@ body{
         grid-area:i;
 
         /*color:white;*/
-        color:rgb(184, 116, 14);
+        color:var(--dyellow);
         margin-top:12%;
 
         display:grid;
@@ -114,6 +136,7 @@ body{
         'ih'
         'it'
         ;
+
         z-index:10;
     }
 
@@ -126,6 +149,7 @@ body{
             font-size:5rem;
             margin-left:3%;
             margin-right:3%;
+            color:white;
         }
 
         #introText{
@@ -135,25 +159,28 @@ body{
             text-align:center;
             font-family:'Arcane';
             font-weight:100;
-            font-size:1.7rem;
+            font-size:1.2rem;
             margin-top:-5rem;
 
-            transition-delay:1s;
+            transition-delay:2s;
             transition-duration:2s;
         }
 
     #introButton{
         grid-area:ib;
 
-        color:rgb(184, 116, 14);
+        color:rgba(255, 255, 255, 0);
         justify-self:center;
         align-content:center center;
         font-family:'Arcane';
         font-weight:500;
         text-decoration:none;
-        font-size:1.7rem;
+        font-size:1.6rem;
 
-        transition-duration:0.6s;
+        transition-delay:4s;
+        transition-duration:1.7s;
+
+        z-index:3;
     }
 
         #introButton:hover{
@@ -164,8 +191,22 @@ body{
     margin-top:0;
 }
 
+.mainContainer:hover .dot{
+    margin-top:27.5%;
+}
+
 .mainContainer:hover #introText{
-    color:rgb(184, 116, 14);
+    color:white;
+}
+
+.mainContainer:hover #introButton{
+    /*color:rgb(184, 116, 14);
+    color:rgb(255, 198, 10);*/
+    color:white;
+}
+
+introButton:hover{
+    color:var(--yellow) !important;
 }
 
 
