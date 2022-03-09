@@ -63,13 +63,20 @@ body{
             transition-duration:0.2s;
         }
 
-            li a:hover:not(.active){
-                background-color:var(--yellow);
-                color:white;
+            #yNav li a:hover:not(.active){
+                background-color:var(--dyellow);
             }
 
-            .active{
-                background-color:var(--yellow);
+            #pNav li a:hover:not(.active){
+                background-color:var(--dpurple);
+            }
+
+            #tNav li a:hover:not(.active){
+                background-color:var(--dteal);
+            }
+
+            .navMenu li a:active{
+                background-color:white;
             }
 
 .mainContainer{
