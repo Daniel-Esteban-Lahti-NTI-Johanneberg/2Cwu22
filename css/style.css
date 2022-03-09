@@ -27,23 +27,21 @@ body{
 
 .navMenu{
     display:flex;
-
     list-style-type:none;
     margin:0;
     padding:0;
     overflow:hidden;
     justify-content:center;
 }
-    .navMenu #yNav{
+    .navMenu#yNav{
         background-color:var(--yellow);
-        color:var(--yellow);
     }
 
-    #pNav{
+    .navMenu#pNav{
         background-color:var(--purple);
     }
 
-    #tNav{
+    .navMenu#tNav{
         background-color:var(--teal);
     }
 
@@ -60,7 +58,7 @@ body{
             text-align:center;
             font-family:'Arcane';
             font-size:20px;
-            color:rgb(51, 31, 0);
+            color:white;
 
             transition-duration:0.2s;
         }
