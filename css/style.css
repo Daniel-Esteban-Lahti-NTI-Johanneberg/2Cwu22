@@ -40,6 +40,8 @@ body{
     padding:0;
     overflow:hidden;
     justify-content:center;
+
+    z-index:10;
 }
     .navMenu#yNav{
         background-color:var(--yellow);
@@ -58,9 +60,9 @@ body{
     }
 
         .navMenu li a{
-            display: block;
+            display:block;
 
-            padding: 8px;
+            padding:8px;
             background-color:none;
             text-decoration:none;
             text-align:center;
@@ -229,90 +231,114 @@ body{
 
 /*Sida4*/
 
-#contactIcons{
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    color:var(--teal);
-    font-size:10rem;
+#sida2main{
+    z-index:6;
 }
 
-    #getInTouch{
+    #tealSlidingScreen{
         display:flex;
+
+        background-color:var(--teal); 
+        position:fixed;
+        width:100vw;
+        height:53vh;
+        margin-top:-100%;
+
+        transition-delay:0s;
+        transition-duration:1.5s;
+        transition-timing-function:ease;
+
+        z-index:1;
     }
 
-        .contactText{
-            font-family:'Arcane';
-            font-size:12rem;
-            font-weight:500;
+    #contactIcons{
+        display:flex;
+        flex-direction:column;
 
-            margin:0;
+        justify-content:center;
+        align-items:center;
 
-            transition-duration:0.2s;
+        color:var(--teal);
+        font-size:10rem;
+    }
+
+        #getInTouch{
+            display:flex;
         }
 
-            .contactText:hover{
-                color:var(--dteal);
+            .contactText{
+                font-family:'Arcane';
+                font-size:12rem;
+                font-weight:500;
+
+                margin:0;
+
+                transition-duration:0.2s;
             }
 
-            #get{
+                .contactText:hover{
+                    color:var(--dteal);
+                }
+
+                #get{
+                    flex:1;
+
+                    margin:20px;
+                }
+
+                #in{
+                    flex:2;
+
+                    margin:20px;
+                }
+            
+                #touch{
+                    flex:3; 
+
+                    margin:20px;
+                }
+
+        #iconHolder{
+            display:flex;
+        }
+
+            .contactIcon{
+                color:var(--teal);
+                font-family:'Social Shapes';
+                text-decoration:none;
+                margin:0;
+
+                transition-duration:0.2s;
+            }
+
+                .icon:hover{
+                    font-size:11rem;
+                    color:var(--dteal);
+                }
+
+                .icon:active{
+                    color:white;
+                }
+
+            #instagram{
                 flex:1;
-
-                margin:20px;
             }
 
-            #in{
+            #facebook{
                 flex:2;
-
-                margin:20px;
-            }
-         
-            #touch{
-                flex:3; 
-
-                margin:20px;
             }
 
-    #iconHolder{
-        display:flex;
-    }
-
-        .contactIcon{
-            color:var(--teal);
-            font-family:'Social Shapes';
-            text-decoration:none;
-            margin:0;
-
-            transition-duration:0.2s;
-        }
-
-            .icon:hover{
-                font-size:11rem;
-                color:var(--dteal);
+            #youtube{
+                flex:3;
             }
 
-            .icon:active{
-                color:white;
+            #gmail{
+                flex:4;
             }
 
-        #instagram{
-            flex:1;
-        }
-
-        #facebook{
-            flex:2;
-        }
-
-        #youtube{
-            flex:3;
-        }
-
-        #gmail{
-            flex:4;
-        }
+body:hover #tealSlidingScreen{
+    margin-top:-8%;
+}
 /*_______________________________________*/
 
 /*----*/
