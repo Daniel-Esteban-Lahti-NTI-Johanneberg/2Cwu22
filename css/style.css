@@ -23,8 +23,7 @@ body{
 }
 
 .bodyNoOverflow{
-    overflow-x:hidden;
-    overflow-y:hidden;
+    overflow:hidden;
 }
 
 .bodyOverflow{
@@ -34,8 +33,10 @@ body{
 
 .navMenu{
     display:flex;
-    
+    position:fixed;
+
     list-style-type:none;
+    width:100vw;
     margin:0;
     padding:0;
     overflow:hidden;
@@ -45,14 +46,17 @@ body{
 }
     .navMenu#yNav{
         background-color:var(--yellow);
+        box-shadow: 0 8px 10px 0 var(--dyellow);
     }
 
     .navMenu#pNav{
         background-color:var(--purple);
+        box-shadow: 0 8px 10px 0 var(--dpurple);
     }
 
     .navMenu#tNav{
         background-color:var(--teal);
+        box-shadow: 0 8px 10px 0 var(--dteal);
     }
 
     .navMenu li{
@@ -87,6 +91,168 @@ body{
 
             .navMenu li a:active{
                 background-color:white;
+            }
+      
+.dropDownBar{
+    display:none;
+    position:relative;
+
+    margin-top:-1px;
+    width:100vw;
+    height:57px;
+
+    z-index:5;
+}
+
+    .dropDownBar#yBar{
+        background-color:var(--yellow);
+        box-shadow: 0 5px 10px 0 var(--dyellow);
+    }
+
+    .dropDownBar#pBar{
+        background-color:var(--purple);
+        box-shadow: 0 5px 10px 0 var(--dpurple);
+    }
+
+    .dropDownBar#tBar{
+        background-color:var(--teal);
+        box-shadow: 0 5px 10px 0 var(--dteal);
+    }
+
+    .dropDownBar p{
+        display:flex;
+        position:fixed;
+
+        font-family:'Arcane';
+        color:white;
+        margin-left:20px;
+        margin-top:-30px;
+        font-size:5.5rem;
+
+        z-index:5;
+    }
+
+    .dropDownMenu{
+        display:flex;
+
+        flex-direction:column;
+        justify-content:space-around;
+
+        height:60vh;
+        width:100vw;
+        position:fixed;
+        top:-100vh;
+        list-style-type:none;
+        padding:0;
+
+        transition:1s ease;
+
+        z-index:4;
+    }
+
+        .dropDownMenu li a{
+            display:block;
+
+            padding:8px;
+            background-color:none;
+            text-decoration:none;
+            text-align:center;
+            font-family:'Arcane';
+            font-size:3rem;
+            color:white;
+
+            transition-duration:0.5s;
+        }
+
+        .dropDownMenu#yDrop{
+            background-color:var(--yellow);
+            box-shadow: 0 5px 10px 0 var(--dyellow);
+        }
+
+        .dropDownMenu#pDrop{
+            background-color:var(--purple);
+            box-shadow: 0 5px 10px 0 var(--dpurple);
+        }
+
+        .dropDownMenu#tDrop{
+            background-color:var(--teal);
+            box-shadow: 0 5px 10px 0 var(--dteal);
+        }
+
+        .show{
+            top:55px;
+            margin:0;
+        }
+
+    #fadeLayer{
+        display:none;
+        position:fixed;
+
+        height:100vh;
+        width:100vw;
+        background-color:rgba(0, 0, 0, 0.5);
+
+        z-index:5;
+    }
+
+        #fadeLayer.visible{
+            display:block;
+        }
+
+    #dropDownIcon{
+        display:flex;
+        position:fixed;
+
+        right:0;
+        flex-direction:column;
+        width:50px;
+        height:45px;
+        margin:4px auto;
+        transform:rotate(0deg);
+        transition-duration:.5s;
+        cursor:pointer;
+
+        z-index:10;
+    }
+
+        #dropDownIcon span{
+            display:flex;
+            position:relative;
+
+            height:9px;
+            width:80%;
+            margin:8%;
+            background:white;
+            border-radius:10px;
+            opacity:1;
+            transform:rotate(0deg);
+            transition-duration:0.4s;
+        }
+
+        #dropDownIcon span:nth-child(1){
+
+        }
+
+            #dropDownIcon.open span:nth-child(1){
+                transform:rotate(135deg);
+                top:35%;
+            }
+
+        #dropDownIcon span:nth-child(2){
+
+        }
+
+            #dropDownIcon.open span:nth-child(2){
+                opacity:0;
+            }
+
+        #dropDownIcon span:nth-child(3){
+
+        }
+
+            #dropDownIcon.open span:nth-child(3){
+                transform:rotate(-135deg);
+                top:-30%;
             }
 
 .mainContainer{
@@ -232,21 +398,18 @@ body{
 /*Sida4*/
 
 #sida2main{
-    z-index:6;
-}
 
+}
     #tealSlidingScreen{
         display:flex;
+        position:fixed;
 
         background-color:var(--teal); 
-        position:fixed;
         width:100vw;
         height:53vh;
-        margin-top:-100%;
+        margin-top:-100vh;
 
-        transition-delay:0s;
-        transition-duration:1.5s;
-        transition-timing-function:ease;
+        transition:1.2s ease;
 
         z-index:1;
     }
@@ -254,6 +417,7 @@ body{
     #contactIcons{
         display:flex;
         flex-direction:column;
+        position:inherit;
 
         justify-content:center;
         align-items:center;
@@ -264,16 +428,19 @@ body{
 
         #getInTouch{
             display:flex;
+            flex-direction:row !important;
         }
 
             .contactText{
                 font-family:'Arcane';
                 font-size:12rem;
                 font-weight:500;
-
                 margin:0;
+                color:white;
 
                 transition-duration:0.2s;
+
+                z-index:3;
             }
 
                 .contactText:hover{
@@ -282,24 +449,25 @@ body{
 
                 #get{
                     flex:1;
-
                     margin:20px;
                 }
 
                 #in{
                     flex:2;
-
                     margin:20px;
                 }
             
                 #touch{
                     flex:3; 
-
                     margin:20px;
                 }
 
         #iconHolder{
             display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+
+            z-index:3;
         }
 
             .contactIcon{
@@ -309,6 +477,8 @@ body{
                 margin:0;
 
                 transition-duration:0.2s;
+
+                z-index:5;
             }
 
                 .icon:hover{
@@ -320,24 +490,8 @@ body{
                     color:white;
                 }
 
-            #instagram{
-                flex:1;
-            }
-
-            #facebook{
-                flex:2;
-            }
-
-            #youtube{
-                flex:3;
-            }
-
-            #gmail{
-                flex:4;
-            }
-
 body:hover #tealSlidingScreen{
-    margin-top:-8%;
+    margin-top:-15%;
 }
 /*_______________________________________*/
 
@@ -377,6 +531,36 @@ body:hover #tealSlidingScreen{
     #movingBubbles{
         display:none;
     }
+
+    .navMenu{
+        display:none;
+    }
+
+    .dropDownBar{
+        display:flex;
+    }
+
+    #getInTouch{
+        flex-direction:column;
+        font-size:auto;
+    }
+
+    .contactText{
+        font-size:2rem;
+        flex-direction:row;
+    }
+
+    #tealSlidingScreen{
+        height:calc(20vh) !important;
+    }
+
+    #iconHolder{
+        margin-top:25vh;
+        text-align:center;
+        font-size:4rem;
+        width:1fr 1fr 1fr 1fr;
+    }
+
 }
 /*_______________________________________*/
 
