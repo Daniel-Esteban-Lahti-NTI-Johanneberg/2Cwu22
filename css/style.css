@@ -387,20 +387,56 @@ body{
 
 /*Sida2*/
 
+#sida2main{
+
+}
+
+    #ySlidingScreen{
+        display:flex;
+        position:fixed;
+
+        background-color:var(--yellow); 
+        width:100vw;
+        height:53vh;
+        margin-top:-100vh;
+
+        transition:1.2s ease;
+
+        z-index:1;
+    }
+
+
 
 /*_______________________________________*/
 
 /*Sida3*/
 
+#sida3main{
+
+}
+
+    #pSlidingScreen{
+        display:flex;
+        position:fixed;
+
+        background-color:var(--purple); 
+        width:100vw;
+        height:53vh;
+        margin-top:-100vh;
+
+        transition:1.2s ease;
+
+        z-index:1;
+    }
 
 /*_______________________________________*/
 
 /*Sida4*/
 
-#sida2main{
+#sida4main{
 
 }
-    #tealSlidingScreen{
+    #tSlidingScreen{
         display:flex;
         position:fixed;
 
@@ -491,7 +527,7 @@ body{
                     color:white;
                 }
 
-body:hover #tealSlidingScreen{
+body:hover #tSlidingScreen{
     margin-top:-15%;
 }
 /*_______________________________________*/
