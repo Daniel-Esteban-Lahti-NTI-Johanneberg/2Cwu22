@@ -704,6 +704,7 @@ body:hover #tSlidingScreen{
     #getInTouch{
         flex-direction:column;
         font-size:auto;
+        margin-top:57px;
     }
 
     .contactText{
@@ -712,7 +713,7 @@ body:hover #tSlidingScreen{
     }
 
     #tSlidingScreen{
-        height:calc(15vh) !important;
+        height:23vh !important;
     }
 
     #iconHolder{
