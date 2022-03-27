@@ -20,15 +20,7 @@ body{
     margin:0;
     background-color:white;
     user-select: none;
-}
-
-.bodyNoOverflow{
     overflow:hidden;
-}
-
-.bodyOverflow{
-    overflow-x:hidden;
-    overflow-y:hidden;
 }
 
 .navMenu{
@@ -95,7 +87,7 @@ body{
       
 .dropDownBar{
     display:none;
-    position:relative;
+    position:fixed;
 
     margin-top:-1px;
     width:100vw;
@@ -243,6 +235,11 @@ body{
 .mainContainer{
     height:100vh;
 }
+
+.textCenter{
+    text-align:center;
+}
+
 /*_______________________________________*/
 
 /*Sida1*/
@@ -415,26 +412,30 @@ body{
     #sida2main main{
         display:flex;
         flex-direction:row;
-
         justify-content:space-between;
 
         margin-top:150px;
+
+        background-color:white;
+
+        z-index:3;
     }
 
         #leftAbout{
             width:min-content;
+
+            z-index:3;
         }
 
             #me{
                 height:400px;
-                
-                transition-duration:0.2s;
 
                 z-index:5;
             }
 
             #leftAbout p{
                 overflow-wrap:break-word;
+                text-align:center;
             }
 
         #rightAbout{
@@ -644,8 +645,11 @@ body:hover #tSlidingScreen{
 /*Mobile*/
 
 @media only screen and (max-width: 479px) {
-    #movingBubbles{
-        display:none;
+
+    /*Misc*/
+    body{
+        overflow-x:hidden;
+        overflow-y:visible;
     }
 
     .navMenu{
@@ -656,6 +660,47 @@ body:hover #tSlidingScreen{
         display:flex;
     }
 
+    /*Sida 1*/
+    #movingBubbles{
+        display:none;
+    }    
+
+    /*Sida 2*/
+    #mainHeader{
+        display:none !important;
+    }
+
+    #ySlidingScreen{
+        display:none !important;
+    }
+
+    #sida2main{
+        flex-direction:column;
+        justify-items:flex-end;
+    }
+
+        #sida2main main{
+            flex-direction:column;
+            margin-top:100px
+        }
+
+            #leftAbout{
+            }
+
+                #me{
+                    margin-top:520px;
+                    width:100vw;
+                    height:auto;
+
+                    box-shadow:0 8px 15px 0 rgb(137, 140, 148);
+                }
+
+            #rightAbout{
+
+            }
+
+
+    /*Sida 4*/
     #getInTouch{
         flex-direction:column;
         font-size:auto;
@@ -666,8 +711,8 @@ body:hover #tSlidingScreen{
         flex-direction:row;
     }
 
-    #tealSlidingScreen{
-        height:calc(20vh) !important;
+    #tSlidingScreen{
+        height:calc(15vh) !important;
     }
 
     #iconHolder{
@@ -680,6 +725,7 @@ body:hover #tSlidingScreen{
         .icon:hover{
             font-size:5rem;
         }
+
 
 }
 /*_______________________________________*/
