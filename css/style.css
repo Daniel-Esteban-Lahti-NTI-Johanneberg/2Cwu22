@@ -184,21 +184,6 @@ body{
             margin:0;
         }
 
-    #fadeLayer{
-        display:none;
-        position:fixed;
-
-        height:100vh;
-        width:100vw;
-        background-color:rgba(0, 0, 0, 0.5);
-
-        z-index:5;
-    }
-
-        .visible{
-            display:block;
-        }
-
     #dropDownIcon{
         display:flex;
         position:fixed;
@@ -388,7 +373,8 @@ body{
 /*Sida2*/
 
 #sida2main{
-
+    display:flex;
+    justify-content:center;
 }
 
     #ySlidingScreen{
@@ -405,8 +391,96 @@ body{
         z-index:1;
     }
 
+    #sida2main #mainHeader{
+        display:flex;
+        position:fixed;
 
+        margin-top:40px;
 
+        font-family:'Arcane';
+        font-size:5rem;
+        color:white;
+
+        z-index:3;
+    }
+
+    #sida2main p{
+        font-family:'8bit';
+        color:var(--dyellow);
+        font-weight:100;
+        font-size:1rem;
+        padding:10px;
+    }
+
+    #sida2main main{
+        display:flex;
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        margin-top:150px;
+    }
+
+        #leftAbout{
+            width:min-content;
+        }
+
+            #me{
+                height:400px;
+                
+                transition-duration:0.2s;
+
+                z-index:5;
+            }
+
+            #leftAbout p{
+                overflow-wrap:break-word;
+            }
+
+        #rightAbout{
+            display:flex;
+            flex-direction:column;
+        }
+
+            #rightAbout article{
+                display:flex;
+                flex-direction:column;
+                justify-content:space-around;
+                margin-top:5px;
+
+                box-shadow:0 5px 5px rgb(225, 229, 240); 
+
+                z-index:3;
+            }
+
+                #statsText{
+                    display:flex;
+                    flex-direction:row;
+                    justify-content:space-evenly;
+                }
+
+                    #statsWords{
+                        font-size:16.57px !important;
+                    }
+
+                #rightAbout article h2{
+                    display:flex;
+                    align-self:center;
+
+                    font-family:'Arcane';
+                    font-size:2rem;
+                    font-weight:100;
+                    color:var(--yellow);
+                    margin:0;
+                }
+
+                #rightAbout article h2 p{
+                    font-family:'Digital';
+                }
+
+body:hover #ySlidingScreen{
+    margin-top:-350px;
+}
 /*_______________________________________*/
 
 /*Sida3*/
@@ -554,6 +628,11 @@ body:hover #tSlidingScreen{
 @font-face{
     font-family:'Runes';
     src: url(../font/PixelChozo.ttf)
+}
+
+@font-face{
+    font-family:'8bit';
+    src: url(../font/Monotype_Gerhilt.ttf)
 }
 /*_______________________________________*/
 
