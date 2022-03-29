@@ -816,6 +816,10 @@ body:hover #tSlidingScreen{
         width:90%;
     }
 
+    body:hover #cards{
+        box-shadow:none;
+    }
+
         #pressPointer{
             right:15px;
             font-size:2rem;
