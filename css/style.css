@@ -398,7 +398,7 @@ body{
         font-size:5rem;
         color:white;
 
-        z-index:3;
+        z-index:4;
     }
 
     #sida2main p{
@@ -412,9 +412,10 @@ body{
     #sida2main main{
         display:flex;
         flex-direction:row;
-        justify-content:space-between;
+        justify-content:space-evenly;
 
-        margin-top:150px;
+        width:100%;
+        top:57px;
 
         background-color:white;
 
@@ -422,7 +423,15 @@ body{
     }
 
         #leftAbout{
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            align-items:center;
             width:min-content;
+
+            width:80%;
+            
+            box-shadow:0 5px 5px rgb(225, 229, 240);
 
             z-index:3;
         }
@@ -441,6 +450,7 @@ body{
         #rightAbout{
             display:flex;
             flex-direction:column;
+            justify-content:flex-end;
         }
 
             #rightAbout article{
@@ -487,7 +497,8 @@ body:hover #ySlidingScreen{
 /*Sida3*/
 
 #sida3main{
-
+    display:flex;
+    justify-content:center;
 }
 
     #pSlidingScreen{
@@ -503,6 +514,34 @@ body:hover #ySlidingScreen{
 
         z-index:1;
     }
+
+    #cards{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+
+        width:40vw;
+    }
+
+        .card{
+            display:flex;
+
+            height:15vh;
+            box-shadow:0 8px 8px 0 rgb(164, 168, 173);
+            
+        }
+
+            .card img{
+                width:auto;
+                height:100%;
+            }
+
+            .cardContainer{
+                vertical-align:center;
+                font-family:'Arcane';  
+            }
+
+
 
 /*_______________________________________*/
 
@@ -577,7 +616,6 @@ body:hover #ySlidingScreen{
             display:flex;
             flex-wrap:wrap;
             justify-content:space-between;
-            margin-top:5%;
 
             z-index:3;
         }
@@ -603,7 +641,8 @@ body:hover #ySlidingScreen{
                 }
 
 body:hover #tSlidingScreen{
-    margin-top:-15%;
+    top:-15%;
+    margin:0;
 }
 /*_______________________________________*/
 
@@ -685,6 +724,7 @@ body:hover #tSlidingScreen{
         }
 
             #leftAbout{
+
             }
 
                 #me{
