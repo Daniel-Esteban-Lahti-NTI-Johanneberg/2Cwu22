@@ -371,7 +371,7 @@ body{
 
 #sida2main{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
 }
 
     #ySlidingScreen{
@@ -385,7 +385,7 @@ body{
 
         transition:1.2s ease;
 
-        z-index:1;
+        z-index:4;
     }
 
     #sida2main #mainHeader{
@@ -398,7 +398,7 @@ body{
         font-size:5rem;
         color:white;
 
-        z-index:4;
+        z-index:5;
     }
 
     #sida2main p{
@@ -425,13 +425,11 @@ body{
         #leftAbout{
             display:flex;
             flex-direction:column;
-            justify-content:flex-end;
+            justify-content:center;
             align-items:center;
             width:min-content;
-
-            width:80%;
             
-            box-shadow:0 5px 5px rgb(225, 229, 240);
+            /*box-shadow:0 5px 5px rgb(225, 229, 240);*/
 
             z-index:3;
         }
@@ -439,7 +437,7 @@ body{
             #me{
                 height:400px;
 
-                z-index:5;
+                z-index:3;
             }
 
             #leftAbout p{
@@ -450,7 +448,7 @@ body{
         #rightAbout{
             display:flex;
             flex-direction:column;
-            justify-content:flex-end;
+            align-self:center;
         }
 
             #rightAbout article{
@@ -499,16 +497,35 @@ body:hover #ySlidingScreen{
 #sida3main{
     display:flex;
     justify-content:center;
+
+    font-family:'Arcane';
+    color:var(--purple);
 }
+
+    #work{
+        position:fixed;
+        margin-left:20%;
+        margin-top:100px;
+
+        writing-mode:vertical-lr;
+        text-orientation:sideways-right;
+        font-size:10rem;
+        font-family:'Arcane';
+        color:white;
+
+        z-index:2;
+    }
 
     #pSlidingScreen{
         display:flex;
-        position:fixed;
+        position:absolute;
 
         background-color:var(--purple); 
-        width:100vw;
-        height:53vh;
-        margin-top:-100vh;
+        width:200px;
+        height:100%;
+        margin-left:40%;
+
+        box-shadow:-60px 0px 15px var(--dpurple) inset;
 
         transition:1.2s ease;
 
@@ -520,15 +537,20 @@ body:hover #ySlidingScreen{
         flex-direction:column;
         justify-content:space-evenly;
 
+        background-color:white;
         width:40vw;
+
+        z-index:2;
     }
 
         .card{
             display:flex;
+            align-self:center;
 
+            width:80%;
             height:15vh;
-            box-shadow:0 8px 8px 0 rgb(164, 168, 173);
-            
+            box-shadow:0 8px 8px 0 rgb(164, 170, 177);
+            border-radius:0 100px 100px 0;
         }
 
             .card img{
@@ -536,12 +558,30 @@ body:hover #ySlidingScreen{
                 height:100%;
             }
 
-            .cardContainer{
-                vertical-align:center;
-                font-family:'Arcane';  
+            #pressPointer{
+                display:flex;
+                position:relative;
+                margin:auto;
+                margin-right:0;
+                right:50px;
+                font-size:2rem;
             }
 
+            .cardContainer{
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                
+                font-size:2rem;
+            }
 
+                .cardContainer p{
+                    margin-left:10px;
+                }
+
+body:hover #pSlidingScreen{
+    margin-left:21.5%;
+}
 
 /*_______________________________________*/
 
@@ -641,7 +681,7 @@ body:hover #ySlidingScreen{
                 }
 
 body:hover #tSlidingScreen{
-    top:-15%;
+    top:-25%;
     margin:0;
 }
 /*_______________________________________*/
@@ -652,7 +692,7 @@ body:hover #tSlidingScreen{
 
 @font-face{
     font-family:'Social Shapes';
-    src: url(../font/Type\ Icons.ttf)
+    src: url(../font/Social\ Media\ Circled.otf)
 }
 
 @font-face{
@@ -739,7 +779,19 @@ body:hover #tSlidingScreen{
 
             }
 
+    /*Sida 3*/
+    #cards{
+        width:90%;
+    }
 
+        #pressPointer{
+            right:15px;
+            font-size:2rem;
+        }
+
+        .cardContainer{
+            font-size:1.5rem;
+        }
     /*Sida 4*/
     #getInTouch{
         flex-direction:column;
@@ -753,14 +805,15 @@ body:hover #tSlidingScreen{
     }
 
     #tSlidingScreen{
-        height:23vh !important;
+        margin-top:-100px !important;
     }
 
     #iconHolder{
-        margin-top:25vh;
+        display:flex;
+        flex-direction:column;
+        margin-top:6vh;
         text-align:center;
-        font-size:4rem;
-        width:1fr 1fr 1fr 1fr;
+        font-size:8rem;
     }
 
         .icon:hover{
