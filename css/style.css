@@ -525,8 +525,6 @@ body:hover #ySlidingScreen{
         height:100%;
         margin-left:40%;
 
-        box-shadow:-60px 0px 15px var(--dpurple) inset;
-
         transition:1.2s ease;
 
         z-index:1;
@@ -537,6 +535,8 @@ body:hover #ySlidingScreen{
         flex-direction:column;
         justify-content:space-evenly;
 
+        transition-delay:0.3s;
+        transition-duration:0.2s;
         background-color:white;
         width:40vw;
 
@@ -563,7 +563,7 @@ body:hover #ySlidingScreen{
                 background-color:var(--purple);
                 opacity:60%;
 
-                transition-duration:0.5s;
+                transition-duration:0.3s;
 
                 z-index:3;
             }
@@ -601,6 +601,10 @@ body:hover #ySlidingScreen{
 
 body:hover #pSlidingScreen{
     margin-left:21.5%;
+}
+
+body:hover #cards{
+    box-shadow:-10px 0px 15px var(--dpurple);
 }
 
 .card:hover{
@@ -833,6 +837,7 @@ body:hover #tSlidingScreen{
     }
 
     #tSlidingScreen{
+        top:-25% !important;
         margin-top:-100px !important;
     }
 
