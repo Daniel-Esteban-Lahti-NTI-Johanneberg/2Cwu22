@@ -604,7 +604,7 @@ body:hover #pSlidingScreen{
 }
 
 body:hover #cards{
-    box-shadow:-10px 0px 15px var(--dpurple);
+    box-shadow:12px 0 12px 0 rgb(255, 255, 255), -6px 0px 9px var(--dpurple);
 }
 
 .card:hover{
