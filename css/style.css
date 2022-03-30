@@ -115,11 +115,12 @@ body{
         display:flex;
         position:fixed;
 
+        margin:0;
+        top:-24px;
+
         font-family:'Arcane';
         color:white;
-        margin-left:20px;
-        margin-top:-30px;
-        font-size:5.5rem;
+        font-size:5.1rem;
 
         z-index:5;
     }
@@ -498,6 +499,8 @@ body:hover #ySlidingScreen{
     display:flex;
     justify-content:center;
 
+    height:100vh;
+
     font-family:'Arcane';
     color:var(--purple);
 }
@@ -533,7 +536,9 @@ body:hover #ySlidingScreen{
     #cards{
         display:flex;
         flex-direction:column;
-        justify-content:space-evenly;
+        padding-top:50px;
+        padding-bottom:20px;
+        justify-content:space-around;
 
         transition-delay:0.3s;
         transition-duration:0.2s;
@@ -548,7 +553,7 @@ body:hover #ySlidingScreen{
             align-self:center;
 
             width:80%;
-            height:15vh;
+            height:12%;
             box-shadow:0 8px 8px 0 rgb(164, 170, 177);
             border-radius:0 100px 100px 0;
 
