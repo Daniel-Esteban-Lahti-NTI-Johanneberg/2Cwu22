@@ -16,10 +16,12 @@
 /*Style*/
 /*-----*/
 
+/*Overall Style*/
+
 body{
     margin:0;
     background-color:white;
-    user-select: none;
+    user-select:none;
     overflow:hidden;
 }
 
@@ -116,11 +118,12 @@ body{
         position:fixed;
 
         margin:0;
-        top:-24px;
+        top:-16px;
+        left:5px;
 
         font-family:'Arcane';
         color:white;
-        font-size:5.1rem;
+        font-size:5rem;
 
         z-index:5;
     }
@@ -201,7 +204,6 @@ body{
             width:80%;
             margin:8%;
             background:white;
-            border-radius:10px;
             opacity:1;
             transform:rotate(0deg);
             transition-duration:0.4s;
@@ -286,7 +288,6 @@ body{
     #introduction{
         grid-area:i;
 
-        /*color:white;*/
         color:var(--dyellow);
         margin-top:12%;
 
@@ -411,45 +412,65 @@ body{
     }
 
     #sida2main main{
-        display:flex;
-        flex-direction:row;
-        justify-content:space-evenly;
+        display:grid;
+        grid-template-areas:
+        'lA mA rA'
+        ;
+        grid-template-columns:30% 40% 30%;
 
+        padding-left:50px;
+        padding-right:50px;
         width:100%;
-        top:57px;
-
         background-color:white;
 
         z-index:3;
     }
 
         #leftAbout{
+            grid-area:lA;
             display:flex;
-            flex-direction:column;
-            justify-content:center;
+            flex-direction:row-reverse;
             align-items:center;
-            width:min-content;
-            
-            /*box-shadow:0 5px 5px rgb(225, 229, 240);*/
 
             z-index:3;
         }
 
             #me{
-                height:400px;
+                height:500px;
+                border-radius:80px 0 0 0;
+                border-right:5px solid var(--yellow);
+                transition-duration:0.5s;
 
                 z-index:3;
             }
 
-            #leftAbout p{
+            #middleAbout{
+                grid-area:mA;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+
                 overflow-wrap:break-word;
                 text-align:center;
+                line-height:30px;
+                margin:20px;
+                padding:60px;
+                font-family:'Arcane';
             }
 
+                #middleAbout h1{
+                    color:var(--yellow);
+                    font-weight:100;
+                    font-size:2.5rem;
+                }
+
         #rightAbout{
+            grid-area:rA;
             display:flex;
             flex-direction:column;
             align-self:center;
+
+            width:80%;
         }
 
             #rightAbout article{
@@ -489,7 +510,7 @@ body{
                 }
 
 body:hover #ySlidingScreen{
-    margin-top:-350px;
+    margin-top:-355px;
 }
 /*_______________________________________*/
 
@@ -500,8 +521,6 @@ body:hover #ySlidingScreen{
     justify-content:center;
 
     height:100vh;
-
-    font-family:'Arcane';
     color:var(--purple);
 }
 
@@ -556,8 +575,10 @@ body:hover #ySlidingScreen{
             height:12%;
             box-shadow:0 8px 8px 0 rgb(164, 170, 177);
             border-radius:0 100px 100px 0;
+            background-color:white;
+            font-family:'8bit';
 
-            transition-duration:0.3s;
+            transition-duration:0.2s;
         }
 
             #pFilter{
@@ -586,10 +607,13 @@ body:hover #ySlidingScreen{
             #pressPointer{
                 display:flex;
                 position:relative;
+
                 margin:auto;
                 margin-right:0;
                 right:50px;
                 font-size:2rem;
+
+                transition-duration:0.2s;
             }
 
             .cardContainer{
@@ -670,10 +694,6 @@ body:hover #cards{
                 z-index:3;
             }
 
-                /*.contactText:hover{
-                    color:var(--dteal);
-                }*/
-
                 #get{
                     flex:1;
                     margin:20px;
@@ -718,7 +738,7 @@ body:hover #cards{
                 }
 
 body:hover #tSlidingScreen{
-    top:-25%;
+    top:-29%;
     margin:0;
 }
 /*_______________________________________*/
@@ -734,17 +754,7 @@ body:hover #tSlidingScreen{
 
 @font-face{
     font-family:'Arcane';
-    src: url(../font/Arcane\ Nine.otf)
-}
-
-@font-face{
-    font-family:'Digital';
-    src: url(../font/DS-DIGI.TTF)
-}
-
-@font-face{
-    font-family:'Runes';
-    src: url(../font/PixelChozo.ttf)
+    src: url(../font/BebasNeue-Regular.ttf)
 }
 
 @font-face{
@@ -752,7 +762,6 @@ body:hover #tSlidingScreen{
     src: url(../font/Monotype_Gerhilt.ttf)
 }
 /*_______________________________________*/
-
 
 /*--------------*/
 /*Responsiveness*/
@@ -792,29 +801,33 @@ body:hover #tSlidingScreen{
 
     #sida2main{
         flex-direction:column;
-        justify-items:flex-end;
     }
 
         #sida2main main{
+            display:flex;
             flex-direction:column;
-            margin-top:100px
+            padding:0;
         }
 
-            #leftAbout{
-
-            }
-
                 #me{
-                    margin-top:520px;
+                    margin-top:1100px;
                     width:100vw;
                     height:auto;
+                    border-radius:0 0 0 0;
+                    border-right:none;
 
                     box-shadow:0 8px 15px 0 rgb(137, 140, 148);
                 }
 
-            #rightAbout{
-
+            #middleAbout{
+                padding:10px;
             }
+
+            #rightAbout{
+                display:flex;
+                flex-direction:column;
+            }
+            
 
     /*Sida 3*/
     #cards{
@@ -866,4 +879,4 @@ body:hover #tSlidingScreen{
 }
 /*_______________________________________*/
 
-/*Desktop*/
+/*Hej Emil!*/
