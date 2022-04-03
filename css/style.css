@@ -437,7 +437,6 @@ body{
 
             #me{
                 height:500px;
-                border-radius:80px 0 0 0;
                 border-right:5px solid var(--yellow);
                 transition-duration:0.5s;
 
