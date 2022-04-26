@@ -61,7 +61,7 @@ body{
             display:block;
 
             padding:8px;
-            background-color:none;
+            background-color:rgba(255, 255, 255, 0);
             text-decoration:none;
             text-align:center;
             font-family:'Arcane';
@@ -150,7 +150,7 @@ body{
             display:block;
 
             padding:8px;
-            background-color:none;
+            background-color:rgba(255, 255, 255, 0);
             text-decoration:none;
             text-align:center;
             font-family:'Arcane';
@@ -483,13 +483,13 @@ body{
                 z-index:3;
             }
 
-                #statsText{
+                .statsText{
                     display:flex;
                     flex-direction:row;
                     justify-content:space-evenly;
                 }
 
-                    #statsWords{
+                    .statsWords{
                         font-size:16.57px !important;
                     }
 
@@ -529,7 +529,7 @@ body:hover #ySlidingScreen{
         margin-top:100px;
 
         writing-mode:vertical-lr;
-        text-orientation:sideways-right;
+        text-orientation:vertical;
         font-size:10rem;
         font-family:'Arcane';
         color:white;
@@ -580,7 +580,7 @@ body:hover #ySlidingScreen{
             transition-duration:0.2s;
         }
 
-            #pFilter{
+            .pFilter{
                 display:flex;
 
                 width:100%;
@@ -603,7 +603,7 @@ body:hover #ySlidingScreen{
                 z-index:2;
             }
 
-            #pressPointer{
+            .pressPointer{
                 display:flex;
                 position:relative;
 
@@ -639,7 +639,7 @@ body:hover #cards{
     width:90%;
 }
 
-.card:hover #pFilter{
+.card:hover .pFilter{
     opacity:0;
 }
 
@@ -849,7 +849,7 @@ body:hover #tSlidingScreen{
     /*Sida 4*/
     #getInTouch{
         flex-direction:column;
-        font-size:auto;
+        font-size:50%;
         margin-top:57px;
     }
 
